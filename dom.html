@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para {
+            color: brown;
+            border: 2px solid green;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>dom</h1>
+    <div id="container">
+        <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus vero, accusamus accusantium
+            sit quis, voluptatibus modi, amet mollitia autem qui dolor. Assumenda, vel adipisci? Corporis perspiciatis
+            quae magni animi magnam?</p>
+        <p class="para">Esse fugiat quaerat omnis libero vitae alias perferendis voluptates voluptatum accusamus?
+            Consectetur non, distinctio cum explicabo laborum laboriosam iusto quam veniam nihil, culpa eaque eos quae
+            alias, repudiandae aliquam quisquam.</p>
+        <p class="para">Illum qui possimus accusantium, cumque cum alias, aliquid ullam recusandae vero saepe blanditiis
+            numquam, dolore neque natus harum aut exercitationem? Voluptatum officia eveniet id illum doloremque
+            eligendi laudantium culpa earum.</p>
+    </div>
+
+    <script>
+        const container = document.getElementById('container')
+        const newElement = document.createElement('p');
+        newElement.innerText = 'umquam, dolore neque natus harum aut exercitationem? Voluptatum officia eveniet id illum doloremque eligendi ';
+
+        //    const newContent=document.createTextNode('Hellow World')
+        //     newElement.appendChild(newContent);
+
+        // newElement.setAttribute('class','para');
+        // newElement.className='para'
+        // newElement.classList.add('para');
+        container.appendChild(newElement);
+
+    </script>
+</body>
+
+</html>

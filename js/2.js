@@ -3,49 +3,72 @@
 document.getElementById('deposit-btn').addEventListener('click', function () {
     const depositInput = document.getElementById('deposit-input');
     const newDepositInput = depositInput.value;
-    //deposit
-    const depositAmount = document.getElementById('deposit-amount');
-    const previousDepositAmount = depositAmount.innerText;
+    if (newDepositInput == '') {
 
-    const totalDepositAmount = parseFloat(previousDepositAmount) + parseFloat(newDepositInput);
+        alert('please deposit');
+        
+    }
+    else if (isNaN(newDepositInput)) {
 
-    depositAmount.innerText = totalDepositAmount;
+        alert('Please enter number type');
+    }
+    else {
+        //deposit
+        const depositAmount = document.getElementById('deposit-amount');
+        const previousDepositAmount = depositAmount.innerText;
+
+        const totalDepositAmount = parseFloat(previousDepositAmount) + parseFloat(newDepositInput);
+
+        depositAmount.innerText = totalDepositAmount;
 
 
-    //update balance
-    const balanceAmount = document.getElementById('balance-amount');
-    const previousBalanceAmount = balanceAmount.innerText;
+        //update balance
+        const balanceAmount = document.getElementById('balance-amount');
+        const previousBalanceAmount = balanceAmount.innerText;
 
-    const totalBalanceAmount = parseFloat(previousBalanceAmount) + parseFloat(newDepositInput);
+        const totalBalanceAmount = parseFloat(previousBalanceAmount) + parseFloat(newDepositInput);
 
-    balanceAmount.innerText = totalBalanceAmount;
+        balanceAmount.innerText = totalBalanceAmount;
 
-    depositInput.value = '';
+        depositInput.value = '';
+    }
+
 
 
 })
 document.getElementById('withdraw-btn').addEventListener('click', function () {
     const withdrawInput = document.getElementById('withdraw-input');
     const newWithdrawInput = withdrawInput.value;
+if(newWithdrawInput=='')
+{
+    alert('plsean enter a number');
+}
+else if(isNaN(newWithdrawInput))
+{
+    alert('plsean enter a number');
+}
+else
+{
+//withdraw
+const withdrawAmount = document.getElementById('withdraw-amount');
+const previousWithdrawAmount = withdrawAmount.innerText;
 
-    //withdraw
-    const withdrawAmount = document.getElementById('withdraw-amount');
-    const previousWithdrawAmount = withdrawAmount.innerText;
+const totalWithdrawAmount = parseFloat(previousWithdrawAmount) + parseFloat(newWithdrawInput);
 
-    const totalWithdrawAmount = parseFloat(previousWithdrawAmount) + parseFloat(newWithdrawInput);
-
-    withdrawAmount.innerText = totalWithdrawAmount;
+withdrawAmount.innerText = totalWithdrawAmount;
 
 
-    //update balance
-    const balanceAmount = document.getElementById('balance-amount');
-    const previousBalanceAmount = balanceAmount.innerText;
+//update balance
+const balanceAmount = document.getElementById('balance-amount');
+const previousBalanceAmount = balanceAmount.innerText;
 
-    const totalBalanceAmount = parseFloat(previousBalanceAmount) - parseFloat(newWithdrawInput);
+const totalBalanceAmount = parseFloat(previousBalanceAmount) - parseFloat(newWithdrawInput);
 
-    balanceAmount.innerText = totalBalanceAmount;
+balanceAmount.innerText = totalBalanceAmount;
 
-    withdrawInput.value = '';
+withdrawInput.value = '';
+}
+    
 
 
 })

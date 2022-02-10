@@ -7,6 +7,12 @@ document.getElementById('submit-btn').addEventListener('click', function () {
     const passwordFieldValue = passwordField.value;
     passwordField.value = '';
 
+    if(emailFieldValue=='' && passwordFieldValue=='')
+    {
+        alert('invaild');
+     
+    }
+    
     if ((emailFieldValue == 'sumoniu@gmail.com') && (passwordFieldValue == 'sumon428')) {
         window.location.href = 'bank.html';
     }
