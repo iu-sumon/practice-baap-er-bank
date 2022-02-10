@@ -1,19 +1,4 @@
-document.getElementById('submit-btn').addEventListener('click', function () {
-    const emailField = document.getElementById('email-field');
-    const emailFieldValue = emailField.value;
-    emailField.value = '';
 
-    const passwordField = document.getElementById('password-field');
-    const passwordFieldValue = passwordField.value;
-    passwordField.value = '';
-
-    if ((emailFieldValue == 'sumoniu@gmail.com') && (passwordFieldValue == 'sumon428')) {
-        window.location.href = 'bank.html';
-    }
-
-
-
-})
 
 document.getElementById('deposit-btn').addEventListener('click', function () {
     const depositInput = document.getElementById('deposit-input');
